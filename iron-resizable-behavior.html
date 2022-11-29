@@ -155,7 +155,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     _onIronRequestResizeNotifications: function(event) {
-      var target = event.path ? event.path[0] : event.target;
+      var target = event.composedPath ? event.composedPath()[0] : event.target;
 
       if (target === this) {
         return;
